@@ -10,7 +10,7 @@ enum Direction
 
 public class Fish 
 {
-	private static final int MAX_VELOCITY = 6;
+	private static final int MAX_VELOCITY = 2;
 	private Image image;
 	private Point location;
 	private Point velocity;
@@ -36,7 +36,7 @@ public class Fish
 	
 	private void initializeVelocity()
 	{
-		int velocityX = random.nextInt() % MAX_VELOCITY;
+		int velocityX = 0;//random.nextInt() % MAX_VELOCITY;
 		int velocityY = random.nextInt() % MAX_VELOCITY;
 		this.velocity = new Point(velocityX, velocityY);
 	}
@@ -67,10 +67,10 @@ public class Fish
 	{
 		if(random.nextInt() % 7 <= 1)
 		{
-			velocity.x -= random.nextInt() % 4;
+		/*	velocity.x -= random.nextInt() % 4;
 			velocity.x = Math.min(velocity.x, MAX_VELOCITY);
 			velocity.x = Math.max(velocity.x, -MAX_VELOCITY);
-
+*/
 			velocity.y += random.nextInt() % 4;
 			velocity.y = Math.min(velocity.y, MAX_VELOCITY);
 			velocity.y = Math.max(velocity.y, -MAX_VELOCITY);
