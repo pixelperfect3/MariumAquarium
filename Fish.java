@@ -67,7 +67,7 @@ public class Fish
 	{
 		if(random.nextInt() % 7 <= 1)
 		{
-			velocity.x += random.nextInt() % 4;
+			velocity.x -= random.nextInt() % 4;
 			velocity.x = Math.min(velocity.x, MAX_VELOCITY);
 			velocity.x = Math.max(velocity.x, -MAX_VELOCITY);
 
